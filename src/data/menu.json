@@ -2,727 +2,831 @@
   "1": {
     "id": 1,
     "name": "The Traditional Hummus (Veg)",
+    "description": "Creamy dip made of mashed chickpeas mixed with sesame seed paste and a dash of lemon juice, topped with olive oil.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833451360628216.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1842150511937041.webp"
   },
   "2": {
     "id": 2,
     "name": "Hummus Bel Lahme",
+    "description": "Our Traditional Hummus served with a topping of sauteed small cubes of lamb.",
     "price": 120.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843596530310872.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833451360628216.jpg"
   },
   "3": {
     "id": 3,
     "name": "Hummus Beiruti (Spicy) (Veg)",
+    "description": "Our Traditional Hummus mixed with chili, garlic, parsley and topped with steamed chick peas.",
     "price": 85.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454690487245.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843596530310872.webp"
   },
   "4": {
     "id": 4,
     "name": "Fattet Hummus (Veg)",
+    "description": "Baked chickpeas tossed with toasted pita bread in a hearty concoction of homemade yoghurt mixed with garlic, spices, and a hint of lemon juice served with toppings and melted butter and vegetables at the side.",
     "price": 85.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454745211785.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454690487245.jpg"
   },
   "5": {
     "id": 5,
     "name": "Moutabal (Veg)",
+    "description": "Creamy aubergine dip, mixed with sesame seed paste and a dash of lemon juice, topped with olive oil.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838501224053129.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454745211785.jpg"
   },
   "6": {
     "id": 6,
     "name": "Eggs to your choice",
+    "description": "Boiled Egg, Onion with Chili or Plain Omlette.",
     "price": 25.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454874097537.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838501224053129.jpg"
   },
   "7": {
     "id": 7,
     "name": "Labneh (Veg)",
+    "description": "Middle eastern cream cheese made from strained yogurt topped with olive oil.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454915206780.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454874097537.jpg"
   },
   "8": {
     "id": 8,
     "name": "Warak Enab 6 Pcs (Veg)",
+    "description": "Vine leaves stuffed with rice and spices and marinated in lemon olive oil sauce and served on a thin layer of homemade yoghurt.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454963343273.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454915206780.jpg"
   },
   "9": {
     "id": 9,
     "name": "Foul Moudammas (Veg)",
+    "description": "Boiled fava beans served with olive oil, lemon juice and garlic, topped with a pinch of fresh parsley, served with assorted vegetables.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838690773538033.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833454963343273.jpg"
   },
   "10": {
     "id": 10,
     "name": "Falafel (Veg)",
+    "description": "Deep fried ground beans and chickpeas served with tahini sauce and condiments.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852193043789663.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838690773538033.jpg"
   },
   "11": {
     "id": 11,
     "name": "Chicken Liver",
+    "description": "Shallow fried chicken liver with onion, spices and pomegranate molasses sauce.",
     "price": 110.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456551100811.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852193043789663.webp"
   },
   "12": {
     "id": 12,
     "name": "Pita Bread",
+    "description": "(option of Large- 15)",
     "price": 7.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456619369494.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456551100811.jpg"
   },
   "13": {
     "id": 13,
     "name": "Palestinian Breakfast",
+    "description": "a wholesome and vibrant spread featuring hummus, mutabal, shakshouka, mfaragheth batata, za\u2019atar with olive oil &amp; 2 pita bread",
     "price": 129.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456672188411.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456619369494.jpg"
   },
   "14": {
     "id": 14,
     "name": "Manakeesh with Za\\u0027atar",
+    "description": "Freshly baked Arabic Pita Bread topped with Zaatar &amp; Olive Oil.",
     "price": 50.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456770109646.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456672188411.jpg"
   },
   "16": {
     "id": 16,
     "name": "Shakshooka",
+    "description": "A dish of egg poached in a sauce of tomatoes, olive oil, peppers, onions many spices.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456985965337.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456770109646.jpg"
   },
   "17": {
     "id": 17,
     "name": "Mfarageth Batata",
+    "description": "Diced Potatoes are tossed with scrambled eggs for an easy &amp; delicious meal.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833457028718178.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833456985965337.jpg"
   },
   "18": {
     "id": 18,
     "name": "Soujuk with Eggs",
+    "description": "Soujouk is a spiced middle eastern style sausage cooked with scrambled eggs to give a perfect combination.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1842150528147526.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833457028718178.jpg"
   },
   "19": {
     "id": 19,
     "name": "The Traditional Hummus (Veg)",
+    "description": "Creamy dip made of mashed chickpeas mixed with sesame seed paste and a dash of lemon juice, topped with olive oil.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843596569532233.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1842150528147526.webp"
   },
   "20": {
     "id": 20,
     "name": "Hummus Beiruti (Spicy) (Veg)",
+    "description": "Our Traditional Hummus mixed with chili, garlic, parsley and topped with steamed chick peas.",
     "price": 85.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535420975893.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843596569532233.webp"
   },
   "21": {
     "id": 21,
     "name": "Fattet Hummus (Veg)",
+    "description": "Baked chickpeas tossed with toasted pita bread in a hearty concoction of homemade yoghurt mixed with garlic, spices, and a hint of lemon juice served with toppings and melted butter and vegetables at the side.",
     "price": 85.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1842150496755870.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535420975893.jpg"
   },
   "22": {
     "id": 22,
     "name": "Githeyo Hummus (Veg)",
+    "description": "The Traditional Hummus mixed with Maldivian Githeyo Chilli served with a topping of finely chopped garlic, lime and chilli.",
     "price": 85.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535517596671.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1842150496755870.webp"
   },
   "23": {
     "id": 23,
     "name": "Hummus Bel Foul (Spicy) (Veg)",
+    "description": "Our Traditional Hummus mixed with fava beans topped with spicy lemon and garlic sauce.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535664874917.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535517596671.jpg"
   },
   "24": {
     "id": 24,
     "name": "Hummus Bel Lahme",
+    "description": "Creamy dip made of mashed chickpeas mixed with sesame seed paste and a dash of lemon juice, topped with olive oil and grilled lamb",
     "price": 120.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535738334821.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535664874917.jpg"
   },
   "25": {
     "id": 25,
     "name": "Moutabal (Veg)",
+    "description": "Creamy aubergine dip, mixed with sesame seed paste and a dash of lemon juice, topped with olive oil.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535783810686.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535738334821.jpg"
   },
   "26": {
     "id": 26,
     "name": "Labneh (Veg)",
+    "description": "Middle eastern cream cheese made from strained yogurt topped with olive oil.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536116668431.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833535783810686.jpg"
   },
   "27": {
     "id": 27,
     "name": "Warak Enab 6 Pcs (Veg)",
+    "description": "Vine leaves stuffed with rice and spices and marinated in lemon olive oil sauce and served on a thin layer of homemade yoghurt.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536182300968.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536116668431.jpg"
   },
   "28": {
     "id": 28,
     "name": "Fattet Eggplant (Veg)",
+    "description": "Baked eggplant tossed with toasted pita bread in a hearty concoction of homemade yoghurt mixed with garlic, spices and a hint of lemon served with toppings of nuts and parsley.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835156478929179.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536182300968.jpg"
   },
   "29": {
     "id": 29,
     "name": "Mezze Platter (Veg)",
+    "description": "(Hummus, Moutabal, Tabuleh, Falafel, Green &amp; Black Olives) (Veg).",
     "price": 170.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536337115501.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835156478929179.jpg"
   },
   "30": {
     "id": 30,
     "name": "Foul Moudammas (Veg)",
+    "description": "Boiled fava beans served with olive oil, lemon juice and garlic, topped with a pinch of fresh parsley, served with assorted vegetables.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838690790032441.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536337115501.jpg"
   },
   "31": {
     "id": 31,
     "name": "Falafel (Veg)",
+    "description": "Deep fried ground beans and chickpeas served with tahini sauce and condiments.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536437131795.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838690790032441.jpg"
   },
   "32": {
     "id": 32,
     "name": "Spicy Stuffed Falafel (Veg)",
+    "description": "Deep fried minced chickpeast chickpeas stuffed with onion and spices served with tahini sauce and condiments.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852641281274305.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536437131795.jpg"
   },
   "33": {
     "id": 33,
     "name": "Moussaka (Veg)",
+    "description": "Moussaka is fried eggplant based dish served in Lazeez special tomato sauce and spices.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536522533016.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852641281274305.webp"
   },
   "34": {
     "id": 34,
     "name": "Batata Harra(spicy) (Veg)",
+    "description": "Fried potato cubes topped with chili flakes, garlic, coriander and lemon.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536569059811.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536522533016.jpg"
   },
   "35": {
     "id": 35,
     "name": "Vegetable Platter (Veg)",
+    "description": "Fried cauliflower with sumak, fried eggplant, fried tomato with garlic, chilli, green &amp; black olives served with Arabic bread.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536615370181.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536569059811.jpg"
   },
   "36": {
     "id": 36,
     "name": "Lamb Aarayis",
+    "description": "Our freshly baked pita bread toasted with a filling of marinated minced lamb meat.",
     "price": 120.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536665655915.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536615370181.jpg"
   },
   "37": {
     "id": 37,
     "name": "Chicken Aarayis",
+    "description": "Our freshly baked pita bread toasted with a filling of marinated minced chicken meat.",
     "price": 120.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852194624487308.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536665655915.jpg"
   },
   "38": {
     "id": 38,
     "name": "Chicken Liver",
+    "description": "Shallow fried chicken liver with onion, spices and pomegranate molasses sauce.",
     "price": 110.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536826572315.JPG"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852194624487308.webp"
   },
   "39": {
     "id": 39,
     "name": "Lamb Kebbah",
+    "description": "Deep fried ground lamb and bulgur wheat shell stuffed with minced lamb, chopped onions and crushed almond nuts served with yoghurt.",
     "price": 120.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192720112102.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536826572315.JPG"
   },
   "40": {
     "id": 40,
     "name": "Fattet Chicken",
+    "description": "Aromatic flavoured rice on toasted pita bread topped with shredded grilled chicken and a hearty concoction of homemade yoghurt mixed with garlic, spices and a hint of lemon. Served with topping of nuts and parsley.",
     "price": 140.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536926900092.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192720112102.webp"
   },
   "41": {
     "id": 41,
     "name": "Shakshooka",
+    "description": "Eggs poached in a sauce of tomatoes, olive oil, peppers, onion and spices",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833537337315033.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833536926900092.jpg"
   },
   "42": {
     "id": 42,
     "name": "Fattoush (Veg)",
+    "description": "A refreshing mixture of tomato, cucumber, lettuce, radish, mint and rocket leaves served with our special sumak dressing and toasted pita bread crumbs.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161046360574.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833537337315033.jpg"
   },
   "43": {
     "id": 43,
     "name": "Falafel Salad",
+    "description": "This falafel salad bowl is loaded with fresh greens, cucumber, tomatoes, and crispy falafel topped with tahini sauce.",
     "price": 100.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1839046018134820.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161046360574.jpg"
   },
   "44": {
     "id": 44,
     "name": "Rocca Salad",
+    "description": "This middle eastern salad is made with rocket leaves, onion and a sumac lemon dressing.",
     "price": 100.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835156779539359.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1839046018134820.jpg"
   },
   "45": {
     "id": 45,
     "name": "Tabbouleh (Veg)",
+    "description": "A traditional must have, made of fresh parsley, tomatoes, onions and bulgur wheat, topped with lemon, olive oil and spices.",
     "price": 100.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835157632316470.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835156779539359.jpg"
   },
   "46": {
     "id": 46,
     "name": "Couscous Tabbouleh (Veg)",
+    "description": "Lazeez special salad, made of couscous, fresh parsley, tomatoes, lemon and mint.",
     "price": 100.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538238651141.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835157632316470.jpg"
   },
   "47": {
     "id": 47,
     "name": "Tahini Salad (Veg)",
+    "description": "A mix of fresh cut tomato, cucumber and parsley mixed with our special tahini sauce.",
     "price": 80.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538284288472.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538238651141.jpg"
   },
   "48": {
     "id": 48,
     "name": "Spicy Tuna Salad (Veg)",
+    "description": "A mixture of fresh cut tomato, cucumber, lettuce, red and green bell peppers topped with Maldivian tune chunk served with our special dressing.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538340037506.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538284288472.jpg"
   },
   "49": {
     "id": 49,
     "name": "Lentil (veg)",
+    "description": "A hearty concoction made of a mix of ground lentils, potatoes and onions served with toasted Arabic bread and lemon wedges.",
     "price": 85.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538388367227.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538340037506.jpg"
   },
   "50": {
     "id": 50,
     "name": "Freekeh, Palestinian Traditional Soup",
+    "description": "A real health boost meal made from green durum wheat and shredded chicken mixed with onion and spices.",
     "price": 85.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1841702343725499.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833538388367227.jpg"
   },
   "51": {
     "id": 51,
     "name": "Chicken Shawarma Wrap",
+    "description": "Chicken shawarma wrapped in Arabic pita bread with pickles, lettuce and garlic sauce served with French Fries",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852656288413432.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1841702343725499.webp"
   },
   "52": {
     "id": 52,
     "name": "Lamb Shawarma Wrap",
+    "description": "Lamb shawarma wrapped in pita bread with pickles, parsley, onions and tomatoes served with French fries, condiments and tahini sauce.",
     "price": 110.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833539053312391.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852656288413432.webp"
   },
   "53": {
     "id": 53,
     "name": "Falafel Wrap (veg)",
+    "description": "Falafel wrapped in tortilla bread with pickles, parsley, onions and tomatoes served with French fries and condiments.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164933247712.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833539053312391.jpg"
   },
   "54": {
     "id": 54,
     "name": "Musakhan Rolls",
+    "description": "Grilled shredded chicken mixed with caramelized onion, sumac and some traditional spices, wrapped in tortilla bread and served with yoghurt.",
     "price": 120.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843596945864077.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164933247712.jpg"
   },
   "55": {
     "id": 55,
     "name": "Chicken Kabab Wrap",
+    "description": "Grilled minced chicken meat mixed with spices wrapped in Arabic pita bread, served with Grilled Onion, Tomato, Chilli and French fries.",
     "price": 90.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833539282598519.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843596945864077.webp"
   },
   "56": {
     "id": 56,
     "name": "Lamb Kabab Wrap",
+    "description": "Grilled minced lamb meat mixed with spices, parsely and onions wrapped in Arabic pita bread, served with Grilled Onion, Tomato, Chilli, French fries and Tahini Sauce.",
     "price": 110.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838684908506827.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833539282598519.jpg"
   },
   "57": {
     "id": 57,
     "name": "Lazeez Chicken Shawarma",
+    "description": "Chicken shawarma served with garlic sauce, French fries, condiments &amp; 2 pita bread",
     "price": 140.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835160888288603.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838684908506827.jpg"
   },
   "58": {
     "id": 58,
     "name": "Mixed Shawarma Platter",
+    "description": "Chicken and lamb platter served with French fries, condiments, garlic sauce, tahini sauce and two pita bread.",
     "price": 170.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172989273187.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835160888288603.jpg"
   },
   "59": {
     "id": 59,
     "name": "Grilled Spicy Chicken Wings",
+    "description": "Grilled chicken wings marinated in lemon, garlic and spices served with French fries and garlic sauce.",
     "price": 140.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172749063900.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172989273187.jpg"
   },
   "60": {
     "id": 60,
     "name": "Shish Tawouk",
+    "description": "Grilled chicken breast skewers marinated with garlic and a hint of tomato paste, served grilled onion, tomato, chilli, French fries and garlic sauce (2 Skewers).",
     "price": 120.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833561184173824.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172749063900.jpg"
   },
   "61": {
     "id": 61,
     "name": "Chicken Kabab",
+    "description": "Grilled minced lamb chicken meat skewers, mixed with spices, parsley and onions, served with grilled onion, tomato, chilli and French fries (2 Skewers).",
     "price": 130.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835160076618546.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833561184173824.jpg"
   },
   "62": {
     "id": 62,
     "name": "Lazeez Special (Stuffed Chicken Breast)",
+    "description": "Grilled stuffed chicken breast with fresh chopped vegetables served with grilled onion, tomato, chilli and French fries.",
     "price": 150.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172830967243.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835160076618546.jpg"
   },
   "63": {
     "id": 63,
     "name": "Grilled Chicken",
+    "description": "Half grilled chicken marinated in lemon, garlic and spices served with French fries, condiments and garlic sauce.",
     "price": 130.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835162068954460.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172830967243.jpg"
   },
   "64": {
     "id": 64,
     "name": "Lamb Chops",
+    "description": "Grilled lamb chops marinated in olive oil, lemon, rosemary and spices served with condiments (3 Pieces).",
     "price": 300.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172447839978.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835162068954460.jpg"
   },
   "65": {
     "id": 65,
     "name": "Lamb Mechwe",
+    "description": "Grilled marinated lamb shoulder skewers served with grilled onion, tomato, chilli and a side of French fries (2 Skewers)",
     "price": 170.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192119322832.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835172447839978.jpg"
   },
   "66": {
     "id": 66,
     "name": "Spicy Kebab",
+    "description": "Grilled minced chicken meat stuffed in capsicum and mixed with spices, served with grilled onion, tomato, chilli, French fries and tahini sauce.",
     "price": 150.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833562058412209.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192119322832.webp"
   },
   "67": {
     "id": 67,
     "name": "Lamb Kabab",
+    "description": "Grilled minced lamb meat skewers, mixed with spices, parsley and onions, served with grilled onion, tomato, chilli, French fries and tahini sauce (2 Skewers).",
     "price": 150.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161998207686.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833562058412209.jpg"
   },
   "68": {
     "id": 68,
     "name": "Lazeez Mixed Grill",
+    "description": "A platter consisting of lamb mechwe skewer, shish tawouk skewer, kabab skewer, lamb chops, aarayis kafta and grilled marinated jumbo prawns.",
     "price": 320.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852194546113276.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161998207686.jpg"
   },
   "69": {
     "id": 69,
     "name": "Grilled Jumbo Prawns",
+    "description": "Grilled marinated jumbo prawns served with cocktail sauce (5 Pieces).",
     "price": 260.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833562235403738.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852194546113276.webp"
   },
   "70": {
     "id": 70,
     "name": "Grilled Hamoor (450 gm)",
+    "description": "Grouper fish grilled to perfection and served with grilled vegetables and tahini parsley sauce.",
     "price": 260.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164631706680.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833562235403738.jpg"
   },
   "71": {
     "id": 71,
     "name": "Chicken Maqluba",
+    "description": "A Palestinian tradition, maqluba means? upside down? in Arabic and is a pot of stewed chicken, richly spiced rice and fried vegetables, cooked and flipped onto a serving dish to form an impressive tower.",
     "price": 165.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164688043398.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164631706680.jpg"
   },
   "72": {
     "id": 72,
     "name": "Lamb Maqluba",
+    "description": "A Palestinian tradition, maqluba means? upside down? in Arabic and is a pot of seasoned lamb, richly spiced rice and fried vegetables, cooked and flipped onto a serving dish to form an impressive tower.",
     "price": 185.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843595827408797.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164688043398.jpg"
   },
   "73": {
     "id": 73,
     "name": "Chicken Qidreh",
+    "description": "A traditional Palestinian dish cooked to perfection in a clay pot with aromatic rice, spices and chicken in the oven.",
     "price": 165.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164544338906.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843595827408797.webp"
   },
   "74": {
     "id": 74,
     "name": "Lamb Qidreh",
+    "description": "A traditional Palestinian dish cooked to perfection in a clay pot with aromatic rice, spices and lamb in the oven.",
     "price": 185.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833562722677140.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164544338906.jpg"
   },
   "75": {
     "id": 75,
     "name": "Sayadieh",
+    "description": "A seasoned white fish and rice dish, made with spices and stock of the fish head and bones, garrnished with silvered served with tahini salad.",
     "price": 210.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161556332399.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833562722677140.jpg"
   },
   "76": {
     "id": 76,
     "name": "Dawood Basha",
+    "description": "Dawood Basha is the most famous Levantine stew made of meatballs flavoured with Arabic spices and stew in tomato and pomegranate molasses sauce.",
     "price": 170.0,
     "category": "levant_flavours",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161556332399.jpg"
   },
   "300": {
     "id": 300,
     "name": "Okra (Veg)",
+    "description": null,
     "price": 170.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161497721856.jpg"
+    "image": null
   },
   "77": {
     "id": 77,
     "name": "Okra with Lamb",
+    "description": "Our special OKRA (ladies finger) lamb curry served with fragrant basmati rice.",
     "price": 190.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833563561985986.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835161497721856.jpg"
   },
   "78": {
     "id": 78,
     "name": "Lazeez Prawn Rice (spicy)",
+    "description": "Juicy prawns stir-fried with fragrant basmati rice, infused with aromatic spices.",
     "price": 160.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833565974193929.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833563561985986.jpg"
   },
   "79": {
     "id": 79,
     "name": "Spicy Fettucini with Minced Lamb",
+    "description": null,
     "price": 175.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566091232092.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833565974193929.jpg"
   },
   "80": {
     "id": 80,
     "name": "Spicy Fettucini with Tuna",
+    "description": null,
     "price": 165.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566318751049.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566091232092.jpg"
   },
   "81": {
     "id": 81,
     "name": "Kafta with Tomato in the Oven",
+    "description": "Kafta and potato tray is a hearty meal made of seasoned minced lamb and cooked in a rich tomato sauce topped with slices of potato and baked in the oven.",
     "price": 160.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566384021351.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566318751049.jpg"
   },
   "82": {
     "id": 82,
     "name": "Kafta with Tahini in the oven",
+    "description": "Kafta - onion, herb, and Middle Eastern spiced minced lamb, topped with potatoes and baked with lemony tahini sauce.",
     "price": 170.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835158522580516.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566384021351.jpg"
   },
   "83": {
     "id": 83,
     "name": "Macaroni in Yoghurt (Veg)",
+    "description": "Macaroni in Yoghurt(Veg).",
     "price": 150.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566499617108.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835158522580516.jpg"
   },
   "84": {
     "id": 84,
     "name": "Spicy Spaghetti with Kabab",
+    "description": "",
     "price": 170.0,
     "category": "levant_flavours",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833566499617108.jpg"
   },
   "85": {
     "id": 85,
     "name": "Spicy Vegetable Tray (Veg)",
+    "description": null,
     "price": 130.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835157299624583.jpg"
+    "image": null
   },
   "86": {
     "id": 86,
     "name": "Lamb Tagine",
+    "description": "A traditional Moroccan savoury and sweet lamb stew in richly spiced sauce with dried apricots, nutmeg and a sprinkling of almonds, cooked in clay pot with a conical lid. (4 hours advance order).",
     "price": 400.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833612831894889.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835157299624583.jpg"
   },
   "87": {
     "id": 87,
     "name": "Chicken Tagine",
+    "description": "A traditional Moroccan dish of chicken pieces braised with spices, garlic, onion, olives, and preserved lemons cooked in clay pot with a conical lid. (2 hours advance order)",
     "price": 340.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164323634958.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833612831894889.jpg"
   },
   "88": {
     "id": 88,
     "name": "Lamb Shank",
+    "description": "Lamb stew in richly spiced sauce with potato and carrots and sprinkling of almonds, cooked in the oven (2 hours advance order).",
     "price": 310.0,
     "category": "levant_flavours",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1835164323634958.jpg"
   },
   "89": {
     "id": 89,
     "name": "Mansaf",
+    "description": "Mansaf is a Palestinian dish made of lamb cooked in JAMEED (dried and fermented goat yoghurt) with special spices and served with rice topped with a handful of fried sliced almonds. (1 hour advance order).",
     "price": 250.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614773697832.jpg"
+    "image": null
   },
   "90": {
     "id": 90,
     "name": "Mulukhia with Chicken",
+    "description": "Mulukhia is a green soup made from minced Jute mallow leaves and cooked in chicken broth with special spices, garlic and coriander. \"Mulukhia\" is a type of leafy plant called Corchorus, Jute mallow or Nalta. (45 min advance order).",
     "price": 180.0,
     "category": "levant_flavours",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614773697832.jpg"
   },
   "91": {
     "id": 91,
     "name": "Spinach and Lamb Stew",
+    "description": "Tender lamb delicately spiced with coriander seeds and mix spices cooked with spinach. (45 min advance order).",
     "price": 190.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614867367882.jpg"
+    "image": null
   },
   "92": {
     "id": 92,
     "name": "Ouzi",
+    "description": "Ouzi is a dish of baked lamb and spiced rice, a blend of the sweet spices, including allspice, cinnamon, cloves, cardamom, it's middle eastern accent and makes it an all over the arab country, most of special occasions. (1 hour advance order).",
     "price": 270.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614912181004.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614867367882.jpg"
   },
   "93": {
     "id": 93,
     "name": "Mahashi",
+    "description": "Mahashi literally means stuffed, and Palestinians love stuffing every kind of vegetable imaginable! It is a delicious hearty meal that is the epitome of comfort food combining rice, meat and veggies wrapped up in the most flavorful juicy broth. (1 hour advance order).",
     "price": 220.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614965887641.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614912181004.jpg"
   },
   "94": {
     "id": 94,
     "name": "Garlic Creme (Creme thoum)",
+    "description": null,
     "price": 30.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615014482946.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833614965887641.jpg"
   },
   "95": {
     "id": 95,
     "name": "Spicy Garlic Creme",
+    "description": null,
     "price": 30.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615061731250.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615014482946.jpg"
   },
   "96": {
     "id": 96,
     "name": "Tahini Sauce",
+    "description": null,
     "price": 30.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615104669936.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615061731250.jpg"
   },
   "97": {
     "id": 97,
     "name": "Tahini Parsley Sauce",
+    "description": null,
     "price": 40.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615147898953.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615104669936.jpg"
   },
   "98": {
     "id": 98,
     "name": "Pita Bread",
+    "description": "(option of Large - 15)",
     "price": 7.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615202970212.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615147898953.jpg"
   },
   "99": {
     "id": 99,
     "name": "French Fries",
+    "description": null,
     "price": 25.0,
     "category": "levant_flavours",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615202970212.jpg"
   },
   "100": {
     "id": 100,
     "name": "Grilled vegetables",
+    "description": null,
     "price": 50.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615265536413.jpg"
+    "image": null
   },
   "101": {
     "id": 101,
     "name": "Saffron Rice",
+    "description": null,
     "price": 45.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833616694040478.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833615265536413.jpg"
   },
   "102": {
     "id": 102,
     "name": "Garlic Rice",
+    "description": null,
     "price": 45.0,
     "category": "levant_flavours",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833616775394522.jpeg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833616694040478.jpg"
   },
   "103": {
     "id": 103,
     "name": "Pickles",
+    "description": null,
     "price": 30.0,
     "category": "levant_flavours",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1833616775394522.jpeg"
   },
   "104": {
     "id": 104,
     "name": "Cut Cucumber \\u0026 Carrots",
+    "description": null,
     "price": 30.0,
     "category": "levant_flavours",
     "image": null
@@ -730,6 +834,7 @@
   "302": {
     "id": 302,
     "name": "Nuts",
+    "description": null,
     "price": 6.0,
     "category": "levant_flavours",
     "image": null
@@ -737,6 +842,7 @@
   "151": {
     "id": 151,
     "name": "Maldivian Breakfast",
+    "description": null,
     "price": 109.0,
     "category": "all_day_eats",
     "image": null
@@ -744,6 +850,7 @@
   "152": {
     "id": 152,
     "name": "Palestinian Breakfast",
+    "description": null,
     "price": 129.0,
     "category": "all_day_eats",
     "image": null
@@ -751,6 +858,7 @@
   "153": {
     "id": 153,
     "name": "Classic",
+    "description": "two eggs, beef bacon, grilled sausage, hash brown, mushrooms &amp; grilled tomato",
     "price": 149.0,
     "category": "all_day_eats",
     "image": null
@@ -758,6 +866,7 @@
   "154": {
     "id": 154,
     "name": "Eggs Benedict",
+    "description": null,
     "price": 109.0,
     "category": "all_day_eats",
     "image": null
@@ -765,6 +874,7 @@
   "155": {
     "id": 155,
     "name": "Smashed avo on toast",
+    "description": null,
     "price": 129.0,
     "category": "all_day_eats",
     "image": null
@@ -772,6 +882,7 @@
   "156": {
     "id": 156,
     "name": "Egg mayo toast",
+    "description": "boiled egg salad, mayo, cucumber pickles served on toasted sourdough bread",
     "price": 89.0,
     "category": "all_day_eats",
     "image": null
@@ -779,6 +890,7 @@
   "157": {
     "id": 157,
     "name": "Mashuni",
+    "description": null,
     "price": 75.0,
     "category": "all_day_eats",
     "image": null
@@ -786,6 +898,7 @@
   "296": {
     "id": 296,
     "name": "Barabo Mashuni",
+    "description": "a traditional maldivian breakfast dish made with tuna, barabo grated coconut, onions, lime, and a touch of maldivian chili - served with 2 roshi (local thin flat bread)",
     "price": 85.0,
     "category": "all_day_eats",
     "image": null
@@ -793,6 +906,7 @@
   "295": {
     "id": 295,
     "name": "Hiki Mashuni",
+    "description": "a traditional maldivian breakfast dish made with tuna, hikimas, grated coconut, onions, lime, and a touch of maldivian chili - served with 2 roshi (local thin flat bread)",
     "price": 85.0,
     "category": "all_day_eats",
     "image": null
@@ -800,6 +914,7 @@
   "158": {
     "id": 158,
     "name": "Kulhimas",
+    "description": "a fiery maldivian tuna curry made with tuna, simmered in a rich blend of coconut milk, chili, curry leaves, garlic, and traditional island spices \u2013 served with 2 roshi (local thin flat bread)",
     "price": 85.0,
     "category": "all_day_eats",
     "image": null
@@ -807,6 +922,7 @@
   "159": {
     "id": 159,
     "name": "Homemade french toast sticks",
+    "description": "golden, crispy-on-the-outside, soft-on-the-inside sticks of freshly baked bread dipped in a vanilla egg batter, pan-fried to perfection with cinnamon sprinkles and served with maple syrup for dipping",
     "price": 89.0,
     "category": "all_day_eats",
     "image": null
@@ -814,6 +930,7 @@
   "283": {
     "id": 283,
     "name": "Shakshooka",
+    "description": "eggs poached in a sauce of tomatoes, olive oil, peppers, onion and spices",
     "price": 80.0,
     "category": "all_day_eats",
     "image": null
@@ -821,6 +938,7 @@
   "160": {
     "id": 160,
     "name": "Waffle with nutella",
+    "description": "crispy-on-the-outside, fluffy-on-the-inside waffle served on a stick and generously drizzled with rich nutella",
     "price": 99.0,
     "category": "all_day_eats",
     "image": null
@@ -828,6 +946,7 @@
   "284": {
     "id": 284,
     "name": "Mfarageth batata",
+    "description": "diced potatoes tossed with scrambled eggs",
     "price": 90.0,
     "category": "all_day_eats",
     "image": null
@@ -835,6 +954,7 @@
   "161": {
     "id": 161,
     "name": "Crunchy granola",
+    "description": "a mix of crunchy granola, creamy yogurt, topped with seasonal fruits and a drizzle of honey",
     "price": 115.0,
     "category": "all_day_eats",
     "image": null
@@ -842,20 +962,23 @@
   "285": {
     "id": 285,
     "name": "Soujuk with eggs",
+    "description": "sausage cooked with scrambled eggs",
     "price": 90.0,
     "category": "all_day_eats",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838347347984075.jpg"
+    "image": null
   },
   "162": {
     "id": 162,
     "name": "Egg to your choice",
+    "description": null,
     "price": 25.0,
     "category": "all_day_eats",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838347347984075.jpg"
   },
   "163": {
     "id": 163,
     "name": "Grilled sausage",
+    "description": null,
     "price": 20.0,
     "category": "all_day_eats",
     "image": null
@@ -863,6 +986,7 @@
   "164": {
     "id": 164,
     "name": "Garlic bread",
+    "description": null,
     "price": 25.0,
     "category": "all_day_eats",
     "image": null
@@ -870,6 +994,7 @@
   "165": {
     "id": 165,
     "name": "Roshi",
+    "description": null,
     "price": 4.0,
     "category": "all_day_eats",
     "image": null
@@ -877,6 +1002,7 @@
   "166": {
     "id": 166,
     "name": "Mashed potato",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -884,6 +1010,7 @@
   "167": {
     "id": 167,
     "name": "Grilled sweet potato",
+    "description": null,
     "price": 35.0,
     "category": "all_day_eats",
     "image": null
@@ -891,6 +1018,7 @@
   "168": {
     "id": 168,
     "name": "Sauteed spinach",
+    "description": null,
     "price": 40.0,
     "category": "all_day_eats",
     "image": null
@@ -898,6 +1026,7 @@
   "169": {
     "id": 169,
     "name": "Smoked salmon",
+    "description": null,
     "price": 40.0,
     "category": "all_day_eats",
     "image": null
@@ -905,6 +1034,7 @@
   "170": {
     "id": 170,
     "name": "Turkey ham",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -912,6 +1042,7 @@
   "171": {
     "id": 171,
     "name": "Beef bacon",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -919,6 +1050,7 @@
   "172": {
     "id": 172,
     "name": "Avocado",
+    "description": null,
     "price": 45.0,
     "category": "all_day_eats",
     "image": null
@@ -926,6 +1058,7 @@
   "173": {
     "id": 173,
     "name": "Sauteed mushroom",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -933,6 +1066,7 @@
   "174": {
     "id": 174,
     "name": "Hash Brown",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -940,6 +1074,7 @@
   "175": {
     "id": 175,
     "name": "Dhal Curry",
+    "description": null,
     "price": 40.0,
     "category": "all_day_eats",
     "image": null
@@ -947,6 +1082,7 @@
   "286": {
     "id": 286,
     "name": "Sourdough bread",
+    "description": null,
     "price": 20.0,
     "category": "all_day_eats",
     "image": null
@@ -954,6 +1090,7 @@
   "176": {
     "id": 176,
     "name": "Fried rice",
+    "description": null,
     "price": 79.0,
     "category": "all_day_eats",
     "image": null
@@ -961,6 +1098,7 @@
   "177": {
     "id": 177,
     "name": "Nasi goreng",
+    "description": null,
     "price": 79.0,
     "category": "all_day_eats",
     "image": null
@@ -968,6 +1106,7 @@
   "178": {
     "id": 178,
     "name": "Valhomas rice",
+    "description": "spicy and smoky valhomas tossed with rice, chilies, curry leaves and warm spices",
     "price": 99.0,
     "category": "all_day_eats",
     "image": null
@@ -975,6 +1114,7 @@
   "179": {
     "id": 179,
     "name": "Quesadillas (Chicken \\/ Beef)",
+    "description": null,
     "price": 119.0,
     "category": "all_day_eats",
     "image": null
@@ -982,6 +1122,7 @@
   "180": {
     "id": 180,
     "name": "Nachos",
+    "description": null,
     "price": 109.0,
     "category": "all_day_eats",
     "image": null
@@ -989,48 +1130,55 @@
   "293": {
     "id": 293,
     "name": "Chicken Nachos",
+    "description": "crispy tortilla chips piled with chicken, melted cheese, jalape\u00f1os, olives, pico de gallo, sour cream, guacamole, and a drizzle of spicy salsa",
     "price": 139.0,
     "category": "all_day_eats",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852656062989542.webp"
+    "image": null
   },
   "181": {
     "id": 181,
     "name": "Grilled salmon",
+    "description": "tender, perfectly grilled salmon fillet served with seasonal vegetables and a zesty lemon butter sauce",
     "price": 229.0,
     "category": "all_day_eats",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852656062989542.webp"
   },
   "294": {
     "id": 294,
     "name": "Beef Nachos",
+    "description": "crispy tortilla chips piled with beef, melted cheese, jalape\u00f1os, olives, pico de gallo, sour cream, guacamole, and a drizzle of spicy salsa",
     "price": 139.0,
     "category": "all_day_eats",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852649485446174.webp"
+    "image": null
   },
   "182": {
     "id": 182,
     "name": "Stir-Fry Plate - Chicken",
+    "description": "juicy chicken with saut\u00e9ed onion, drizzled with our signature sauce and accompanied by rice or crispy fries",
     "price": 129.0,
     "category": "all_day_eats",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852649671158098.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852649485446174.webp"
   },
   "281": {
     "id": 281,
     "name": "Stir-Fry Plate - Beef",
+    "description": "juicy beef with saut\u00e9ed onion, drizzled with our signature sauce and accompanied by rice or crispy fries",
     "price": 139.0,
     "category": "all_day_eats",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852649760876410.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852649671158098.webp"
   },
   "282": {
     "id": 282,
     "name": "Stir-Fry Plate - Prawn",
+    "description": "juicy prawn with saut\u00e9ed onion, drizzled with our signature sauce and accompanied by rice or crispy fries",
     "price": 159.0,
     "category": "all_day_eats",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852649760876410.webp"
   },
   "183": {
     "id": 183,
     "name": "Pumpkin salad",
+    "description": null,
     "price": 160.0,
     "category": "all_day_eats",
     "image": null
@@ -1038,6 +1186,7 @@
   "184": {
     "id": 184,
     "name": "Beetroot feta salad",
+    "description": null,
     "price": 160.0,
     "category": "all_day_eats",
     "image": null
@@ -1045,6 +1194,7 @@
   "185": {
     "id": 185,
     "name": "Farmer salad",
+    "description": null,
     "price": 109.0,
     "category": "all_day_eats",
     "image": null
@@ -1052,6 +1202,7 @@
   "186": {
     "id": 186,
     "name": "Edamame",
+    "description": "choice of spicy or salted",
     "price": 80.0,
     "category": "all_day_eats",
     "image": null
@@ -1059,6 +1210,7 @@
   "187": {
     "id": 187,
     "name": "Manakeesh (za\\u2019atar)",
+    "description": null,
     "price": 40.0,
     "category": "all_day_eats",
     "image": null
@@ -1066,6 +1218,7 @@
   "287": {
     "id": 287,
     "name": "Manakeesh (Cheese)",
+    "description": "traditional levantine flatbread baked with your choice of toppings",
     "price": 70.0,
     "category": "all_day_eats",
     "image": null
@@ -1073,6 +1226,7 @@
   "288": {
     "id": 288,
     "name": "Manakeesh (Beef Mince)",
+    "description": "traditional levantine flatbread baked with your choice of toppings",
     "price": 70.0,
     "category": "all_day_eats",
     "image": null
@@ -1080,6 +1234,7 @@
   "188": {
     "id": 188,
     "name": "Margherita pizza",
+    "description": "tomato sauce, mozzarella, and fresh basil",
     "price": 109.0,
     "category": "all_day_eats",
     "image": null
@@ -1087,6 +1242,7 @@
   "190": {
     "id": 190,
     "name": "Chicken Supreme",
+    "description": "tomato sauce, mozzarella, grilled chicken, bell peppers, and onion",
     "price": 119.0,
     "category": "all_day_eats",
     "image": null
@@ -1094,6 +1250,7 @@
   "189": {
     "id": 189,
     "name": "Pepperoni pizza",
+    "description": "tomato sauce, mozzarella, and pepperoni",
     "price": 125.0,
     "category": "all_day_eats",
     "image": null
@@ -1101,6 +1258,7 @@
   "301": {
     "id": 301,
     "name": "Aglio Lio",
+    "description": "tossed with olive oil, garlic, chili flakes, and fresh parsley",
     "price": 99.0,
     "category": "all_day_eats",
     "image": null
@@ -1108,6 +1266,7 @@
   "192": {
     "id": 192,
     "name": "Aglio olio (Chicken)",
+    "description": "tossed with chicken, olive oil, garlic, chili flakes, and fresh parsley",
     "price": 129.0,
     "category": "all_day_eats",
     "image": null
@@ -1115,6 +1274,7 @@
   "289": {
     "id": 289,
     "name": "Aglio olio (Prawn)",
+    "description": "tossed with prawn, olive oil, garlic, chili flakes, and fresh parsley",
     "price": 139.0,
     "category": "all_day_eats",
     "image": null
@@ -1122,6 +1282,7 @@
   "290": {
     "id": 290,
     "name": "Aglio olio (Rehi)",
+    "description": "tossed with rehi, olive oil, garlic, chili flakes, and fresh parsley",
     "price": 139.0,
     "category": "all_day_eats",
     "image": null
@@ -1129,6 +1290,7 @@
   "193": {
     "id": 193,
     "name": "Bolognese",
+    "description": "beef mince in tomato sauce",
     "price": 119.0,
     "category": "all_day_eats",
     "image": null
@@ -1136,6 +1298,7 @@
   "194": {
     "id": 194,
     "name": "Carbonara",
+    "description": "creamy pasta with beef bacon and chicken",
     "price": 129.0,
     "category": "all_day_eats",
     "image": null
@@ -1143,6 +1306,7 @@
   "195": {
     "id": 195,
     "name": "Arrabiata",
+    "description": null,
     "price": 109.0,
     "category": "all_day_eats",
     "image": null
@@ -1150,20 +1314,23 @@
   "196": {
     "id": 196,
     "name": "Valhomas spaghetti",
+    "description": "spaghetti tossed with smoked tuna (valhomas), garlic, onions, maldivian chili and herbs",
     "price": 109.0,
     "category": "all_day_eats",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852650016524722.webp"
+    "image": null
   },
   "197": {
     "id": 197,
     "name": "Fried chicken burger",
+    "description": null,
     "price": 120.0,
     "category": "all_day_eats",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852650016524722.webp"
   },
   "198": {
     "id": 198,
     "name": "Classic beef burger",
+    "description": null,
     "price": 140.0,
     "category": "all_day_eats",
     "image": null
@@ -1171,20 +1338,23 @@
   "292": {
     "id": 292,
     "name": "Mini Sliders",
+    "description": null,
     "price": 110.0,
     "category": "all_day_eats",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852191782415420.webp"
+    "image": null
   },
   "199": {
     "id": 199,
     "name": "Ufo burger",
+    "description": "signature beef patty, melted cheese, house made ufo sauce, golden onion rings, crisp lettuce, tomato, pickles in a toasted bun served with fries",
     "price": 150.0,
     "category": "all_day_eats",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852191782415420.webp"
   },
   "200": {
     "id": 200,
     "name": "Cheesy beef \\u0026 mushroom panini",
+    "description": "panini bread with beef, mushroom, tomato and cheese served with salad",
     "price": 119.0,
     "category": "all_day_eats",
     "image": null
@@ -1192,6 +1362,7 @@
   "201": {
     "id": 201,
     "name": "Chicken pesto panini",
+    "description": "panini bread with chicken, tomato slices, and basil pesto served with salad",
     "price": 119.0,
     "category": "all_day_eats",
     "image": null
@@ -1199,6 +1370,7 @@
   "202": {
     "id": 202,
     "name": "tuna melt panini",
+    "description": "panini bread with tuna mayo, mustard and cheese served with salad",
     "price": 109.0,
     "category": "all_day_eats",
     "image": null
@@ -1206,6 +1378,7 @@
   "203": {
     "id": 203,
     "name": "Sweet potato fries",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -1213,6 +1386,7 @@
   "204": {
     "id": 204,
     "name": "French Fries",
+    "description": null,
     "price": 25.0,
     "category": "all_day_eats",
     "image": null
@@ -1220,6 +1394,7 @@
   "205": {
     "id": 205,
     "name": "Cheesy fries",
+    "description": null,
     "price": 35.0,
     "category": "all_day_eats",
     "image": null
@@ -1227,6 +1402,7 @@
   "206": {
     "id": 206,
     "name": "Side Salad",
+    "description": null,
     "price": 40.0,
     "category": "all_day_eats",
     "image": null
@@ -1234,6 +1410,7 @@
   "207": {
     "id": 207,
     "name": "Cut Cucumber \\u0026 Carrots",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -1241,6 +1418,7 @@
   "208": {
     "id": 208,
     "name": "Grilled vegetables",
+    "description": null,
     "price": 50.0,
     "category": "all_day_eats",
     "image": null
@@ -1248,6 +1426,7 @@
   "209": {
     "id": 209,
     "name": "Saffron Rice",
+    "description": null,
     "price": 45.0,
     "category": "all_day_eats",
     "image": null
@@ -1255,6 +1434,7 @@
   "210": {
     "id": 210,
     "name": "Garlic Rice",
+    "description": null,
     "price": 45.0,
     "category": "all_day_eats",
     "image": null
@@ -1262,6 +1442,7 @@
   "211": {
     "id": 211,
     "name": "Pickles",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -1269,6 +1450,7 @@
   "212": {
     "id": 212,
     "name": "Olives",
+    "description": null,
     "price": 40.0,
     "category": "all_day_eats",
     "image": null
@@ -1276,6 +1458,7 @@
   "213": {
     "id": 213,
     "name": "Pita Bread Medium",
+    "description": null,
     "price": 7.0,
     "category": "all_day_eats",
     "image": null
@@ -1283,6 +1466,7 @@
   "214": {
     "id": 214,
     "name": "Pita bread large",
+    "description": null,
     "price": 15.0,
     "category": "all_day_eats",
     "image": null
@@ -1290,6 +1474,7 @@
   "215": {
     "id": 215,
     "name": "Garlic Sauce",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -1297,6 +1482,7 @@
   "216": {
     "id": 216,
     "name": "Spicy Garlic Sauce",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -1304,6 +1490,7 @@
   "217": {
     "id": 217,
     "name": "Tahini Sauce",
+    "description": null,
     "price": 30.0,
     "category": "all_day_eats",
     "image": null
@@ -1311,6 +1498,7 @@
   "218": {
     "id": 218,
     "name": "Tahini Parsley Sauce",
+    "description": null,
     "price": 40.0,
     "category": "all_day_eats",
     "image": null
@@ -1318,6 +1506,7 @@
   "219": {
     "id": 219,
     "name": "Green glow",
+    "description": "cucumber, green apple, lime and mint",
     "price": 90.0,
     "category": "thirsty",
     "image": null
@@ -1325,6 +1514,7 @@
   "220": {
     "id": 220,
     "name": "Vital c boost",
+    "description": "orange, carrot, lime",
     "price": 90.0,
     "category": "thirsty",
     "image": null
@@ -1332,6 +1522,7 @@
   "221": {
     "id": 221,
     "name": "Beet it",
+    "description": "beetroot, apple, ginger",
     "price": 90.0,
     "category": "thirsty",
     "image": null
@@ -1339,6 +1530,7 @@
   "222": {
     "id": 222,
     "name": "Lemon \\u0026 mint",
+    "description": null,
     "price": 65.0,
     "category": "thirsty",
     "image": null
@@ -1346,6 +1538,7 @@
   "223": {
     "id": 223,
     "name": "Orange",
+    "description": null,
     "price": 75.0,
     "category": "thirsty",
     "image": null
@@ -1353,6 +1546,7 @@
   "224": {
     "id": 224,
     "name": "Carrot",
+    "description": null,
     "price": 75.0,
     "category": "thirsty",
     "image": null
@@ -1360,6 +1554,7 @@
   "225": {
     "id": 225,
     "name": "Pomegranate",
+    "description": null,
     "price": 95.0,
     "category": "thirsty",
     "image": null
@@ -1367,6 +1562,7 @@
   "226": {
     "id": 226,
     "name": "Passion Fruit",
+    "description": null,
     "price": 70.0,
     "category": "thirsty",
     "image": null
@@ -1374,111 +1570,127 @@
   "227": {
     "id": 227,
     "name": "Tangy twist",
+    "description": "orange, fresh mint, lime and soda",
     "price": 90.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597418074301.webp"
+    "image": null
   },
   "228": {
     "id": 228,
     "name": "Passion breeze",
+    "description": "passionfruit, fresh mint, lime and soda",
     "price": 90.0,
     "category": "thirsty",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597418074301.webp"
   },
   "229": {
     "id": 229,
     "name": "Peach paradise",
+    "description": "peach, fresh mint and soda",
     "price": 90.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597388837593.webp"
+    "image": null
   },
   "230": {
     "id": 230,
     "name": "Blue Lagoon",
+    "description": "blue curacao, fresh mint, lime and sprite",
     "price": 90.0,
     "category": "thirsty",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597388837593.webp"
   },
   "231": {
     "id": 231,
     "name": "Red ruby",
+    "description": "pomegranate, fresh mint, lime and soda",
     "price": 90.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597528150984.webp"
+    "image": null
   },
   "232": {
     "id": 232,
     "name": "Lazeez island",
+    "description": "mix of cut fresh fruits, fresh mint, lime and sprite",
     "price": 90.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597370325280.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597528150984.webp"
   },
   "233": {
     "id": 233,
     "name": "Red Bull Mojito (Passion \\/ Mint)",
+    "description": "fresh mint, lime and red bull",
     "price": 90.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838436722518981.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1843597370325280.webp"
   },
   "234": {
     "id": 234,
     "name": "Turkish",
+    "description": null,
     "price": 35.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838436999536203.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838436722518981.jpg"
   },
   "235": {
     "id": 235,
     "name": "Lavazza Black",
+    "description": null,
     "price": 30.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838437680357557.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838436999536203.jpg"
   },
   "236": {
     "id": 236,
     "name": "Espresso",
+    "description": null,
     "price": 30.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838437778724863.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838437680357557.jpg"
   },
   "237": {
     "id": 237,
     "name": "Double",
+    "description": null,
     "price": 50.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438238829150.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838437778724863.jpg"
   },
   "238": {
     "id": 238,
     "name": "Macchiato",
+    "description": null,
     "price": 45.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438340469839.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438238829150.jpg"
   },
   "239": {
     "id": 239,
     "name": "Cappuccino",
+    "description": null,
     "price": 55.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438495687201.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438340469839.jpg"
   },
   "240": {
     "id": 240,
     "name": "Latte Macchiato",
+    "description": null,
     "price": 50.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438616182407.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438495687201.jpg"
   },
   "241": {
     "id": 241,
     "name": "Spanish Latte",
+    "description": null,
     "price": 60.0,
     "category": "thirsty",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838438616182407.jpg"
   },
   "242": {
     "id": 242,
     "name": "Frappuccino",
+    "description": "vanilla / caramel / mocha",
     "price": 90.0,
     "category": "thirsty",
     "image": null
@@ -1486,6 +1698,7 @@
   "243": {
     "id": 243,
     "name": "Milkshake",
+    "description": "chocolate / vanilla / strawberry / oreo / ferrero / biscoff",
     "price": 80.0,
     "category": "thirsty",
     "image": null
@@ -1493,6 +1706,7 @@
   "244": {
     "id": 244,
     "name": "Iced Shaken White Mocha",
+    "description": "caramel / vanilla / chocolate",
     "price": 80.0,
     "category": "thirsty",
     "image": null
@@ -1500,6 +1714,7 @@
   "245": {
     "id": 245,
     "name": "Iced latte",
+    "description": null,
     "price": 60.0,
     "category": "thirsty",
     "image": null
@@ -1507,6 +1722,7 @@
   "246": {
     "id": 246,
     "name": "Iced spanish latte",
+    "description": null,
     "price": 70.0,
     "category": "thirsty",
     "image": null
@@ -1514,6 +1730,7 @@
   "247": {
     "id": 247,
     "name": "Chai iced latte",
+    "description": null,
     "price": 70.0,
     "category": "thirsty",
     "image": null
@@ -1521,6 +1738,7 @@
   "248": {
     "id": 248,
     "name": "Affogato",
+    "description": null,
     "price": 60.0,
     "category": "thirsty",
     "image": null
@@ -1528,6 +1746,7 @@
   "249": {
     "id": 249,
     "name": "Lemon ice tea",
+    "description": null,
     "price": 65.0,
     "category": "thirsty",
     "image": null
@@ -1535,6 +1754,7 @@
   "250": {
     "id": 250,
     "name": "Peach ice tea",
+    "description": null,
     "price": 70.0,
     "category": "thirsty",
     "image": null
@@ -1542,6 +1762,7 @@
   "251": {
     "id": 251,
     "name": "Passionfruit ice tea",
+    "description": null,
     "price": 70.0,
     "category": "thirsty",
     "image": null
@@ -1549,6 +1770,7 @@
   "252": {
     "id": 252,
     "name": "Aryan",
+    "description": null,
     "price": 85.0,
     "category": "thirsty",
     "image": null
@@ -1556,6 +1778,7 @@
   "298": {
     "id": 298,
     "name": "Faloodha",
+    "description": null,
     "price": 80.0,
     "category": "thirsty",
     "image": null
@@ -1563,6 +1786,7 @@
   "253": {
     "id": 253,
     "name": "Specialty teas",
+    "description": "english breakfast / green tea with lemongrass &amp; lemon / chamomile tea / sage tea / fresh mint tea",
     "price": 25.0,
     "category": "thirsty",
     "image": null
@@ -1570,6 +1794,7 @@
   "254": {
     "id": 254,
     "name": "Masala tea",
+    "description": null,
     "price": 50.0,
     "category": "thirsty",
     "image": null
@@ -1577,6 +1802,7 @@
   "255": {
     "id": 255,
     "name": "Hot Chocolate",
+    "description": null,
     "price": 70.0,
     "category": "thirsty",
     "image": null
@@ -1584,6 +1810,7 @@
   "256": {
     "id": 256,
     "name": "Matcha latte",
+    "description": null,
     "price": 85.0,
     "category": "thirsty",
     "image": null
@@ -1591,41 +1818,47 @@
   "299": {
     "id": 299,
     "name": "Milk tea",
+    "description": null,
     "price": 35.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439351994585.jpeg"
+    "image": null
   },
   "257": {
     "id": 257,
     "name": "Coca Cola",
+    "description": null,
     "price": 25.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439487973329.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439351994585.jpeg"
   },
   "258": {
     "id": 258,
     "name": "Coca Cola Zero",
+    "description": null,
     "price": 25.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439578080547.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439487973329.jpg"
   },
   "259": {
     "id": 259,
     "name": "Fanta",
+    "description": null,
     "price": 25.0,
     "category": "thirsty",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439958551496.jpeg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439578080547.jpg"
   },
   "260": {
     "id": 260,
     "name": "Sprite",
+    "description": null,
     "price": 25.0,
     "category": "thirsty",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838439958551496.jpeg"
   },
   "261": {
     "id": 261,
     "name": "Soda Water",
+    "description": null,
     "price": 25.0,
     "category": "thirsty",
     "image": null
@@ -1633,6 +1866,7 @@
   "262": {
     "id": 262,
     "name": "Mineral",
+    "description": null,
     "price": 10.0,
     "category": "thirsty",
     "image": null
@@ -1640,6 +1874,7 @@
   "263": {
     "id": 263,
     "name": "Sparkling",
+    "description": null,
     "price": 50.0,
     "category": "thirsty",
     "image": null
@@ -1647,55 +1882,63 @@
   "264": {
     "id": 264,
     "name": "Chocolate brownie",
+    "description": "rich, fudgy chocolate brownie baked to perfection, served warm with a scoop of vanilla ice cream",
     "price": 109.0,
     "category": "sweet_endings",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192800315608.webp"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192901421273.webp"
   },
   "265": {
     "id": 265,
     "name": "Chocolate lava cake",
+    "description": "warm, decadent chocolate cake with a molten gooey center served with vanilla ice cream",
     "price": 119.0,
     "category": "sweet_endings",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192800315608.webp"
   },
   "266": {
     "id": 266,
     "name": "Apple crumble",
+    "description": "baked cinnamon-spiced apples topped with a buttery, crunchy crumble, served warm with vanilla ice cream",
     "price": 109.0,
     "category": "sweet_endings",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192525345926.webp"
+    "image": null
   },
   "267": {
     "id": 267,
     "name": "Kunafa n\\u2019 kream",
+    "description": "a classic middle eastern dessert featuring crispy shredded pastry soaked in syrup, layered with luscious cream",
     "price": 129.0,
     "category": "sweet_endings",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192525345926.webp"
   },
   "268": {
     "id": 268,
     "name": "Croisscream",
+    "description": "flaky, buttery croissant stuffed with creamy vanilla ice cream, rich nutella, and pistachio spread",
     "price": 139.0,
     "category": "sweet_endings",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192368567470.webp"
+    "image": null
   },
   "269": {
     "id": 269,
     "name": "Lotus cheesecake",
+    "description": "creamy cheesecake infused with the rich, caramelized flavor of lotus biscoff, layered on a crunchy lotus biscuit base, and topped with lotus cookie crumbs",
     "price": 119.0,
     "category": "sweet_endings",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1839045896494571.jpg"
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1852192368567470.webp"
   },
   "271": {
     "id": 271,
     "name": "Um Ali",
+    "description": "a rich and creamy baked dessert made with flaky pastry, milk, cream, and a delicious mix of nuts and raisins",
     "price": 110.0,
     "category": "sweet_endings",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1839045896494571.jpg"
   },
   "270": {
     "id": 270,
     "name": "Ice cream selection",
+    "description": "enquire about our ice cream selection",
     "price": 30.0,
     "category": "sweet_endings",
     "image": null
@@ -1703,6 +1946,7 @@
   "272": {
     "id": 272,
     "name": "Milk and rice pudding (Palestinian bondibai)",
+    "description": null,
     "price": 70.0,
     "category": "sweet_endings",
     "image": null
@@ -1710,6 +1954,7 @@
   "273": {
     "id": 273,
     "name": "Banana Pudding",
+    "description": null,
     "price": 70.0,
     "category": "sweet_endings",
     "image": null
@@ -1717,6 +1962,7 @@
   "274": {
     "id": 274,
     "name": "Vanilla Pudding",
+    "description": null,
     "price": 70.0,
     "category": "sweet_endings",
     "image": null
@@ -1724,20 +1970,23 @@
   "276": {
     "id": 276,
     "name": "Basbousa",
+    "description": null,
     "price": 70.0,
     "category": "sweet_endings",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838441534561465.jpg"
+    "image": null
   },
   "277": {
     "id": 277,
     "name": "Mix of Arabic Sweets",
+    "description": null,
     "price": 130.0,
     "category": "sweet_endings",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838441534561465.jpg"
   },
   "278": {
     "id": 278,
     "name": "Lazy cake",
+    "description": null,
     "price": 60.0,
     "category": "sweet_endings",
     "image": null
@@ -1745,20 +1994,23 @@
   "279": {
     "id": 279,
     "name": "Mix Sweet Platter",
+    "description": null,
     "price": 130.0,
     "category": "sweet_endings",
-    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838441628764050.jpg"
+    "image": null
   },
   "280": {
     "id": 280,
     "name": "Halawa with Pistachio",
+    "description": null,
     "price": 60.0,
     "category": "sweet_endings",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1838441628764050.jpg"
   },
   "297": {
     "id": 297,
     "name": "Dessert of the Day",
+    "description": null,
     "price": 50.0,
     "category": "sweet_endings",
     "image": null
@@ -1766,8 +2018,9 @@
   "291": {
     "id": 291,
     "name": "Middle Eastern High Tea",
+    "description": "Get stuck into three tiers of tasty treats, including homemade Shawarma, Falafel sandwiches and Maldivian Hedhika, delicious Baklava and mouth watering desserts. Add some flavour to the experience with a cup of Sage Tea and enjoy the most indulgent afternoon tea. For 2 Pax",
     "price": 225.0,
     "category": "high_tea",
-    "image": null
+    "image": "https://www.menu.lazeez.mv/admin/public/uploads/menu/1839978037632727.webp"
   }
 }

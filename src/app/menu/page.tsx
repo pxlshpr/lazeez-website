@@ -107,35 +107,41 @@ export default function MenuPage() {
 
 function MenuCard({ item, isVeg }: { item: MenuItem; isVeg: boolean }) {
   const hasImage = item.image && !item.image.includes("logo.png");
+  const displayName = item.name.replace(/\s*\(Veg\)/i, "").replace(/\s*\(veg\)/i, "");
 
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex">
-      {hasImage && (
-        <div className="relative w-28 sm:w-32 shrink-0">
-          <Image
-            src={item.image!}
-            alt={item.name}
-            fill
-            className="object-cover"
-            sizes="128px"
-          />
-        </div>
-      )}
+    <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex h-[120px]">
       <div className="flex-1 p-4 flex flex-col justify-between min-w-0">
         <div>
           <div className="flex items-start gap-2">
-            <h3 className="font-medium text-charcoal text-sm leading-snug flex-1">
-              {item.name.replace(/\s*\(Veg\)/i, "").replace(/\s*\(veg\)/i, "")}
+            <h3 className="font-semibold text-charcoal text-[15px] leading-snug flex-1">
+              {displayName}
             </h3>
             {isVeg && (
               <Leaf size={14} className="text-green-600 shrink-0 mt-0.5" />
             )}
           </div>
+          {item.description && (
+            <p className="text-charcoal-light text-xs mt-1 line-clamp-2 leading-relaxed">
+              {item.description}
+            </p>
+          )}
         </div>
-        <p className="text-burgundy font-semibold text-sm mt-2">
+        <p className="text-burgundy font-semibold text-sm">
           MVR {item.price.toFixed(2)}
         </p>
       </div>
+      {hasImage && (
+        <div className="relative w-[120px] shrink-0">
+          <Image
+            src={item.image!}
+            alt={displayName}
+            fill
+            className="object-cover"
+            sizes="120px"
+          />
+        </div>
+      )}
     </div>
   );
 }
