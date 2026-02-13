@@ -32,13 +32,13 @@ const featured = [
 
 export function FeaturedDishes() {
   return (
-    <section className="py-24 bg-cream">
+    <section className="py-24 bg-cream dark:bg-neutral-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-burgundy font-medium tracking-[0.2em] uppercase text-sm mb-3">
             Our Specialties
           </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal">
+          <h2 className="text-3xl sm:text-4xl font-bold text-charcoal dark:text-white">
             Featured Dishes
           </h2>
         </div>
@@ -47,7 +47,7 @@ export function FeaturedDishes() {
           {featured.map((dish) => (
             <div
               key={dish.name}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+              className="group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:shadow-neutral-950/20 transition-all duration-300"
             >
               <div className="relative aspect-square overflow-hidden">
                 <Image
@@ -61,10 +61,10 @@ export function FeaturedDishes() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="font-semibold text-charcoal text-lg mb-1">
+                <h3 className="font-semibold text-charcoal dark:text-white text-lg mb-1">
                   {dish.name}
                 </h3>
-                <p className="text-charcoal-light text-sm leading-relaxed">
+                <p className="text-charcoal-light dark:text-neutral-400 text-sm leading-relaxed">
                   {dish.description}
                 </p>
               </div>

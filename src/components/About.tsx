@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-white dark:bg-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
@@ -24,11 +24,11 @@ export function About() {
             <p className="text-burgundy font-medium tracking-[0.2em] uppercase text-sm">
               Our Story
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal dark:text-white leading-tight">
               From the Kitchens of the
               <span className="text-burgundy"> Middle East</span>
             </h2>
-            <div className="space-y-4 text-charcoal-light leading-relaxed">
+            <div className="space-y-4 text-charcoal-light dark:text-neutral-400 leading-relaxed">
               <p>
                 Lazeez Gourmet brings the tastiest culinary treasures from
                 the kitchens of the Middle East to the Maldives. More than
@@ -48,7 +48,7 @@ export function About() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-cream-dark">
+            <div className="grid grid-cols-3 gap-6 pt-6 border-t border-cream-dark dark:border-neutral-700">
               {[
                 { value: "100+", label: "Dishes" },
                 { value: "5+", label: "Years" },
@@ -58,7 +58,7 @@ export function About() {
                   <p className="text-2xl sm:text-3xl font-bold text-burgundy">
                     {stat.value}
                   </p>
-                  <p className="text-sm text-charcoal-light mt-1">
+                  <p className="text-sm text-charcoal-light dark:text-neutral-400 mt-1">
                     {stat.label}
                   </p>
                 </div>

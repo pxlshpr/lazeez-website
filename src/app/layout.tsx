@@ -4,6 +4,10 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { CartProvider } from "@/context/CartContext";
+import { CartModal } from "@/components/CartModal";
+import { Toast } from "@/components/Toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,13 +42,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} antialiased`}>
-        <ConvexClientProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </ConvexClientProvider>
+        <ThemeProvider>
+          <ConvexClientProvider>
+            <CartProvider>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+              <CartModal />
+              <Toast />
+            </CartProvider>
+          </ConvexClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

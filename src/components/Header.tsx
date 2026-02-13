@@ -3,7 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ShoppingBag, Sun, Moon } from "lucide-react";
+import { useCart } from "@/context/CartContext";
+import { useTheme } from "@/context/ThemeContext";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -16,6 +19,11 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const { itemCount, setIsOpen: setCartOpen } = useCart();
+  const { theme, toggleTheme } = useTheme();
+
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -23,11 +31,16 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // On home page: transparent with white text until scroll
+  // On other pages: always show solid background
+  const showSolidBg = scrolled || !isHome;
+  const isDark = theme === "dark";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
+        showSolidBg
+          ? "bg-white/95 dark:bg-neutral-900/95 backdrop-blur-md shadow-lg dark:shadow-neutral-950/30"
           : "bg-transparent"
       }`}
     >
@@ -43,7 +56,9 @@ export function Header() {
             />
             <span
               className={`font-semibold text-lg tracking-wide transition-colors ${
-                scrolled ? "text-burgundy" : "text-white"
+                showSolidBg
+                  ? "text-burgundy"
+                  : "text-white"
               }`}
             >
               LAZEEZ GOURMET
@@ -51,18 +66,52 @@ export function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-gold ${
-                  scrolled ? "text-charcoal" : "text-white"
+                  showSolidBg
+                    ? "text-charcoal dark:text-neutral-200"
+                    : "text-white"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
+
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className={`p-2 rounded-full transition-colors ${
+                showSolidBg
+                  ? "text-charcoal-light dark:text-neutral-400 hover:text-charcoal dark:hover:text-white"
+                  : "text-white/70 hover:text-white"
+              }`}
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+
+            {/* Cart button */}
+            <button
+              onClick={() => setCartOpen(true)}
+              className={`relative p-2 rounded-full transition-colors ${
+                showSolidBg
+                  ? "text-charcoal-light dark:text-neutral-400 hover:text-charcoal dark:hover:text-white"
+                  : "text-white/70 hover:text-white"
+              }`}
+              aria-label="Open cart"
+            >
+              <ShoppingBag size={20} />
+              {itemCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 bg-burgundy text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                  {itemCount > 99 ? "99+" : itemCount}
+                </span>
+              )}
+            </button>
+
             <a
               href="https://wa.me/9607782460"
               target="_blank"
@@ -73,28 +122,64 @@ export function Header() {
             </a>
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 transition-colors ${
-              scrolled ? "text-charcoal" : "text-white"
-            }`}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile right side */}
+          <div className="flex md:hidden items-center gap-2">
+            {/* Theme toggle mobile */}
+            <button
+              onClick={toggleTheme}
+              className={`p-2 transition-colors ${
+                showSolidBg
+                  ? "text-charcoal-light dark:text-neutral-400"
+                  : "text-white/70"
+              }`}
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+
+            {/* Cart mobile */}
+            <button
+              onClick={() => setCartOpen(true)}
+              className={`relative p-2 transition-colors ${
+                showSolidBg
+                  ? "text-charcoal-light dark:text-neutral-400"
+                  : "text-white/70"
+              }`}
+              aria-label="Open cart"
+            >
+              <ShoppingBag size={20} />
+              {itemCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 bg-burgundy text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                  {itemCount > 99 ? "99+" : itemCount}
+                </span>
+              )}
+            </button>
+
+            {/* Menu toggle */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className={`p-2 transition-colors ${
+                showSolidBg
+                  ? "text-charcoal dark:text-neutral-200"
+                  : "text-white"
+              }`}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile nav */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-cream-dark">
+        <div className="md:hidden bg-white dark:bg-neutral-900 border-t border-cream-dark dark:border-neutral-700">
           <nav className="flex flex-col px-4 py-4 gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-charcoal hover:text-burgundy py-3 px-4 rounded-lg hover:bg-cream text-sm font-medium tracking-wide uppercase transition-colors"
+                className="text-charcoal dark:text-neutral-200 hover:text-burgundy py-3 px-4 rounded-lg hover:bg-cream dark:hover:bg-neutral-800 text-sm font-medium tracking-wide uppercase transition-colors"
               >
                 {link.label}
               </Link>

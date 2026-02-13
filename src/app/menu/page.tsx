@@ -2,10 +2,12 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
-import { Search, Leaf, Loader2 } from "lucide-react";
+import { Search, Leaf, Loader2, Plus } from "lucide-react";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ItemDetailModal } from "@/components/ItemDetailModal";
+import { useCart } from "@/context/CartContext";
 
 type ConvexMenuItem = {
   _id: string;
@@ -32,11 +34,15 @@ type ConvexCategory = {
 export default function MenuPage() {
   const [activeCategoryId, setActiveCategoryId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [detailItem, setDetailItem] = useState<ConvexMenuItem | null>(null);
 
-  const categories = useQuery(api.menu.getCategories) as ConvexCategory[] | undefined;
-  const allItems = useQuery(api.menu.getAllItems) as ConvexMenuItem[] | undefined;
+  const categories = useQuery(api.menu.getCategories) as
+    | ConvexCategory[]
+    | undefined;
+  const allItems = useQuery(api.menu.getAllItems) as
+    | ConvexMenuItem[]
+    | undefined;
 
-  // Set initial active category once loaded
   const activeId = activeCategoryId ?? categories?.[0]?._id ?? null;
 
   const items = useMemo(() => {
@@ -57,7 +63,7 @@ export default function MenuPage() {
 
   return (
     <>
-      <div className="pt-20 min-h-screen bg-cream">
+      <div className="pt-20 min-h-screen bg-cream dark:bg-neutral-950">
         {/* Header */}
         <div className="bg-burgundy text-white py-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -87,7 +93,7 @@ export default function MenuPage() {
 
         {/* Categories */}
         {!searchQuery && categories && (
-          <div className="sticky top-20 z-30 bg-white shadow-sm">
+          <div className="sticky top-20 z-30 bg-white dark:bg-neutral-900 shadow-sm dark:shadow-neutral-950/20">
             <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
               <div className="flex gap-1 py-3 min-w-max">
                 {categories.map((cat) => (
@@ -97,7 +103,7 @@ export default function MenuPage() {
                     className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                       activeId === cat._id
                         ? "bg-burgundy text-white"
-                        : "text-charcoal-light hover:bg-cream"
+                        : "text-charcoal-light dark:text-neutral-400 hover:bg-cream dark:hover:bg-neutral-800"
                     }`}
                   >
                     {cat.label}
@@ -117,7 +123,7 @@ export default function MenuPage() {
           ) : (
             <>
               {searchQuery && (
-                <p className="text-charcoal-light mb-6">
+                <p className="text-charcoal-light dark:text-neutral-400 mb-6">
                   {items.length} result{items.length !== 1 ? "s" : ""} for
                   &ldquo;{searchQuery}&rdquo;
                 </p>
@@ -125,13 +131,17 @@ export default function MenuPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {items.map((item) => (
-                  <MenuCard key={item._id} item={item} />
+                  <MenuCard
+                    key={item._id}
+                    item={item}
+                    onTap={() => setDetailItem(item)}
+                  />
                 ))}
               </div>
 
               {items.length === 0 && (
                 <div className="text-center py-20">
-                  <p className="text-charcoal-light text-lg">
+                  <p className="text-charcoal-light dark:text-neutral-500 text-lg">
                     No dishes found. Try a different search.
                   </p>
                 </div>
@@ -141,22 +151,36 @@ export default function MenuPage() {
         </div>
       </div>
       <WhatsAppButton />
+      <ItemDetailModal
+        item={detailItem}
+        onClose={() => setDetailItem(null)}
+      />
     </>
   );
 }
 
-function MenuCard({ item }: { item: ConvexMenuItem }) {
+function MenuCard({
+  item,
+  onTap,
+}: {
+  item: ConvexMenuItem;
+  onTap: () => void;
+}) {
+  const { addItem } = useCart();
   const hasImage = item.imageUrl && !item.imageUrl.includes("logo.png");
   const displayName = item.name
     .replace(/\s*\(Veg\)/i, "")
     .replace(/\s*\(veg\)/i, "");
 
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex h-[120px]">
+    <div
+      className="bg-white dark:bg-neutral-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md dark:shadow-neutral-950/20 transition-shadow flex h-[120px] cursor-pointer"
+      onClick={onTap}
+    >
       <div className="flex-1 p-4 flex flex-col justify-between min-w-0">
         <div>
           <div className="flex items-start gap-2">
-            <h3 className="font-semibold text-charcoal text-[15px] leading-snug flex-1">
+            <h3 className="font-semibold text-charcoal dark:text-white text-[15px] leading-snug flex-1">
               {displayName}
             </h3>
             {item.isVegetarian && (
@@ -164,14 +188,26 @@ function MenuCard({ item }: { item: ConvexMenuItem }) {
             )}
           </div>
           {item.description && (
-            <p className="text-charcoal-light text-xs mt-1 line-clamp-2 leading-relaxed">
+            <p className="text-charcoal-light dark:text-neutral-500 text-xs mt-1 line-clamp-2 leading-relaxed">
               {item.description}
             </p>
           )}
         </div>
-        <p className="text-burgundy font-semibold text-sm">
-          MVR {item.price.toFixed(2)}
-        </p>
+        <div className="flex items-center justify-between gap-2">
+          <p className="text-burgundy font-semibold text-sm">
+            MVR {item.price.toFixed(2)}
+          </p>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              addItem(item);
+            }}
+            className="w-7 h-7 rounded-full bg-burgundy text-white flex items-center justify-center hover:bg-burgundy-dark transition-colors shrink-0"
+            aria-label={`Add ${displayName} to pre-order`}
+          >
+            <Plus size={14} />
+          </button>
+        </div>
       </div>
       {hasImage && (
         <div className="relative w-[120px] shrink-0">

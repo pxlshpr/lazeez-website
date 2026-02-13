@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-burgundy: #8E2236;
   --color-burgundy-dark: #6B1A29;
@@ -24,6 +26,11 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
+.dark body {
+  background: #121212;
+  color: #E5E5E5;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -31,6 +38,10 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #F3F0EC;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1E1E1E;
 }
 
 ::-webkit-scrollbar-thumb {
