@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { Search, Leaf, Loader2, Plus } from "lucide-react";
+import { Search, Leaf, Loader2, Plus, ChevronDown } from "lucide-react";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -48,6 +48,7 @@ export default function MenuPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [detailItem, setDetailItem] = useState<ConvexMenuItem | null>(null);
   const subcatScrollRef = useRef<HTMLDivElement>(null);
+  const isScrollingTo = useRef(false);
 
   const categories = useQuery(api.menu.getCategories) as
     | ConvexCategory[]
@@ -58,7 +59,6 @@ export default function MenuPage() {
 
   const activeId = activeCategoryId ?? categories?.[0]?._id ?? null;
 
-  // Get subcategories for the active category
   const subcategories = useQuery(
     api.menu.getSubcategories,
     activeId ? { categoryId: activeId as never } : "skip"
@@ -67,7 +67,7 @@ export default function MenuPage() {
   const hasSubcategories =
     subcategories && subcategories.length > 0 && !searchQuery;
 
-  // Reset subcategory when main category changes
+  // Reset active subcategory when category changes
   useEffect(() => {
     setActiveSubcategoryId(null);
   }, [activeId]);
@@ -87,23 +87,10 @@ export default function MenuPage() {
     return allItems.filter((item) => item.categoryId === activeId);
   }, [allItems, activeId, searchQuery]);
 
-  // Group items by subcategory for display
+  // Group items by subcategory (always show all - subcategories are jump links, not filters)
   const groupedItems = useMemo(() => {
     if (!hasSubcategories || !subcategories) return null;
 
-    // If a specific subcategory is selected, filter to just that one
-    if (activeSubcategoryId) {
-      const sub = subcategories.find((s) => s._id === activeSubcategoryId);
-      if (!sub) return null;
-      return [
-        {
-          subcategory: sub,
-          items: items.filter((i) => i.subcategoryId === sub._id),
-        },
-      ];
-    }
-
-    // Show all items grouped by subcategory
     const groups: { subcategory: ConvexSubcategory; items: ConvexMenuItem[] }[] =
       [];
     for (const sub of subcategories) {
@@ -113,17 +100,76 @@ export default function MenuPage() {
       }
     }
 
-    // Items without a subcategory
     const ungrouped = items.filter((i) => !i.subcategoryId);
     if (ungrouped.length > 0) {
       groups.push({
-        subcategory: { _id: "other", categoryId: activeId!, name: "Other", sortOrder: 999, isActive: true },
+        subcategory: {
+          _id: "other",
+          categoryId: activeId!,
+          name: "Other",
+          sortOrder: 999,
+          isActive: true,
+        },
         items: ungrouped,
       });
     }
 
     return groups;
-  }, [items, subcategories, hasSubcategories, activeSubcategoryId, activeId]);
+  }, [items, subcategories, hasSubcategories, activeId]);
+
+  // Scroll-spy: track which section is in view
+  useEffect(() => {
+    if (!groupedItems || groupedItems.length === 0) return;
+
+    const elements = groupedItems
+      .map((g) => document.getElementById(`section-${g.subcategory._id}`))
+      .filter(Boolean) as HTMLElement[];
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (isScrollingTo.current) return;
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id.replace("section-", "");
+            setActiveSubcategoryId(id);
+          }
+        }
+      },
+      { rootMargin: "-140px 0px -60% 0px", threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [groupedItems]);
+
+  // Scroll to a subcategory section
+  const scrollToSection = useCallback((subId: string) => {
+    const el = document.getElementById(`section-${subId}`);
+    if (!el) return;
+    isScrollingTo.current = true;
+    setActiveSubcategoryId(subId);
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => {
+      isScrollingTo.current = false;
+    }, 1000);
+  }, []);
+
+  // Auto-scroll the active pill into view
+  useEffect(() => {
+    if (!activeSubcategoryId || !subcatScrollRef.current) return;
+    const pill = subcatScrollRef.current.querySelector(
+      `[data-sub="${activeSubcategoryId}"]`
+    ) as HTMLElement | null;
+    if (pill) {
+      pill.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
+  }, [activeSubcategoryId]);
 
   const loading = !categories || !allItems;
 
@@ -157,62 +203,59 @@ export default function MenuPage() {
           </div>
         </div>
 
-        {/* Categories */}
+        {/* Combined sticky nav: category dropdown + subcategory jump-links */}
         {!searchQuery && categories && (
           <div className="sticky top-20 z-30 bg-white dark:bg-neutral-900 shadow-sm dark:shadow-neutral-950/20">
-            <div className="max-w-7xl mx-auto px-4 overflow-x-auto">
-              <div className="flex gap-1 py-3 min-w-max">
-                {categories.map((cat) => (
-                  <button
-                    key={cat._id}
-                    onClick={() => setActiveCategoryId(cat._id)}
-                    className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
-                      activeId === cat._id
-                        ? "bg-burgundy text-white"
-                        : "text-charcoal-light dark:text-neutral-400 hover:bg-cream dark:hover:bg-neutral-800"
-                    }`}
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="flex items-center gap-3 py-2.5">
+                {/* Category dropdown */}
+                <div className="relative shrink-0">
+                  <select
+                    value={activeId || ""}
+                    onChange={(e) => setActiveCategoryId(e.target.value)}
+                    className="appearance-none bg-burgundy text-white pl-4 pr-8 py-2 rounded-full text-sm font-medium cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold"
                   >
-                    {cat.label}
-                  </button>
-                ))}
+                    {categories.map((cat) => (
+                      <option key={cat._id} value={cat._id}>
+                        {cat.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-white/70 pointer-events-none"
+                    size={14}
+                  />
+                </div>
+
+                {/* Subcategory jump-links */}
+                {hasSubcategories && (
+                  <>
+                    <div className="w-px h-6 bg-cream-dark dark:bg-neutral-700 shrink-0" />
+                    <div
+                      ref={subcatScrollRef}
+                      className="overflow-x-auto flex-1 min-w-0 scrollbar-hide"
+                    >
+                      <div className="flex gap-1.5 min-w-max">
+                        {subcategories.map((sub) => (
+                          <button
+                            key={sub._id}
+                            data-sub={sub._id}
+                            onClick={() => scrollToSection(sub._id)}
+                            className={`px-3.5 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 ${
+                              activeSubcategoryId === sub._id
+                                ? "bg-charcoal dark:bg-white text-white dark:text-charcoal"
+                                : "text-charcoal-light dark:text-neutral-400 hover:bg-cream dark:hover:bg-neutral-800"
+                            }`}
+                          >
+                            {sub.name}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
-
-            {/* Subcategories */}
-            {hasSubcategories && (
-              <div className="border-t border-cream-dark dark:border-neutral-700">
-                <div
-                  ref={subcatScrollRef}
-                  className="max-w-7xl mx-auto px-4 overflow-x-auto"
-                >
-                  <div className="flex gap-1 py-2 min-w-max">
-                    <button
-                      onClick={() => setActiveSubcategoryId(null)}
-                      className={`px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
-                        activeSubcategoryId === null
-                          ? "bg-charcoal dark:bg-white text-white dark:text-charcoal"
-                          : "text-charcoal-light dark:text-neutral-400 hover:bg-cream dark:hover:bg-neutral-800"
-                      }`}
-                    >
-                      All
-                    </button>
-                    {subcategories.map((sub) => (
-                      <button
-                        key={sub._id}
-                        onClick={() => setActiveSubcategoryId(sub._id)}
-                        className={`px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
-                          activeSubcategoryId === sub._id
-                            ? "bg-charcoal dark:bg-white text-white dark:text-charcoal"
-                            : "text-charcoal-light dark:text-neutral-400 hover:bg-cream dark:hover:bg-neutral-800"
-                        }`}
-                      >
-                        {sub.name}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         )}
 
@@ -232,10 +275,14 @@ export default function MenuPage() {
               )}
 
               {groupedItems ? (
-                // Grouped by subcategory
+                // All items grouped by subcategory with section anchors
                 <div className="space-y-10">
                   {groupedItems.map((group) => (
-                    <div key={group.subcategory._id}>
+                    <div
+                      key={group.subcategory._id}
+                      id={`section-${group.subcategory._id}`}
+                      style={{ scrollMarginTop: "180px" }}
+                    >
                       <h2 className="text-xl font-bold text-burgundy mb-4">
                         {group.subcategory.name}
                       </h2>

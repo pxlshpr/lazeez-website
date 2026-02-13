@@ -4,9 +4,8 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ShoppingBag, Sun, Moon } from "lucide-react";
+import { Menu, X, ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { useTheme } from "@/context/ThemeContext";
 import { ReservationModal } from "./ReservationModal";
 
 const navLinks = [
@@ -23,7 +22,6 @@ export function Header() {
   const [reserveOpen, setReserveOpen] = useState(false);
   const pathname = usePathname();
   const { itemCount, setIsOpen: setCartOpen } = useCart();
-  const { theme, toggleTheme } = useTheme();
 
   const isHome = pathname === "/";
 
@@ -33,10 +31,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // On home page: transparent with white text until scroll
-  // On other pages: always show solid background
   const showSolidBg = scrolled || !isHome;
-  const isDark = theme === "dark";
 
   return (
     <header
@@ -83,19 +78,6 @@ export function Header() {
               </Link>
             ))}
 
-            {/* Theme toggle */}
-            <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-full transition-colors ${
-                showSolidBg
-                  ? "text-charcoal-light dark:text-neutral-400 hover:text-charcoal dark:hover:text-white"
-                  : "text-white/70 hover:text-white"
-              }`}
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-
             {/* Cart button */}
             <button
               onClick={() => setCartOpen(true)}
@@ -124,19 +106,6 @@ export function Header() {
 
           {/* Mobile right side */}
           <div className="flex md:hidden items-center gap-2">
-            {/* Theme toggle mobile */}
-            <button
-              onClick={toggleTheme}
-              className={`p-2 transition-colors ${
-                showSolidBg
-                  ? "text-charcoal-light dark:text-neutral-400"
-                  : "text-white/70"
-              }`}
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-
             {/* Cart mobile */}
             <button
               onClick={() => setCartOpen(true)}

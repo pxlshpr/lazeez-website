@@ -4,7 +4,6 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
-import { ThemeProvider } from "@/context/ThemeContext";
 import { CartProvider } from "@/context/CartContext";
 import { CartModal } from "@/components/CartModal";
 import { Toast } from "@/components/Toast";
@@ -42,19 +41,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body className={`${geistSans.variable} antialiased`}>
-        <ThemeProvider>
-          <ConvexClientProvider>
-            <CartProvider>
-              <Header />
-              <main>{children}</main>
-              <Footer />
-              <CartModal />
-              <Toast />
-            </CartProvider>
-          </ConvexClientProvider>
-        </ThemeProvider>
+        <ConvexClientProvider>
+          <CartProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <CartModal />
+            <Toast />
+          </CartProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   );
