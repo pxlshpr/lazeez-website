@@ -34,6 +34,7 @@ export function Header() {
   const showSolidBg = scrolled || !isHome;
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         showSolidBg
@@ -165,7 +166,9 @@ export function Header() {
           </nav>
         </div>
       )}
-      <ReservationModal isOpen={reserveOpen} onClose={() => setReserveOpen(false)} />
     </header>
+    <ReservationModal isOpen={reserveOpen} onClose={() => setReserveOpen(false)} />
+    </>
+
   );
 }

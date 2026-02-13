@@ -26,6 +26,7 @@ export function Hero() {
   }, []);
 
   return (
+    <>
     <section className="relative h-screen min-h-[600px] overflow-hidden">
       {/* Background slides */}
       {slides.map((src, i) => (
@@ -100,7 +101,9 @@ export function Hero() {
           />
         ))}
       </div>
-      <ReservationModal isOpen={reserveOpen} onClose={() => setReserveOpen(false)} />
     </section>
+    <ReservationModal isOpen={reserveOpen} onClose={() => setReserveOpen(false)} />
+    </>
+
   );
 }
