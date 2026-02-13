@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Search, Leaf, Loader2, Plus } from "lucide-react";
 import { useQuery } from "convex/react";
@@ -15,6 +15,7 @@ type ConvexMenuItem = {
   description?: string;
   price: number;
   categoryId: string;
+  subcategoryId?: string;
   imageUrl?: string;
   isVegetarian: boolean;
   isSpicy: boolean;
@@ -31,10 +32,22 @@ type ConvexCategory = {
   isActive: boolean;
 };
 
+type ConvexSubcategory = {
+  _id: string;
+  categoryId: string;
+  name: string;
+  sortOrder: number;
+  isActive: boolean;
+};
+
 export default function MenuPage() {
   const [activeCategoryId, setActiveCategoryId] = useState<string | null>(null);
+  const [activeSubcategoryId, setActiveSubcategoryId] = useState<string | null>(
+    null
+  );
   const [searchQuery, setSearchQuery] = useState("");
   const [detailItem, setDetailItem] = useState<ConvexMenuItem | null>(null);
+  const subcatScrollRef = useRef<HTMLDivElement>(null);
 
   const categories = useQuery(api.menu.getCategories) as
     | ConvexCategory[]
@@ -45,6 +58,21 @@ export default function MenuPage() {
 
   const activeId = activeCategoryId ?? categories?.[0]?._id ?? null;
 
+  // Get subcategories for the active category
+  const subcategories = useQuery(
+    api.menu.getSubcategories,
+    activeId ? { categoryId: activeId as never } : "skip"
+  ) as ConvexSubcategory[] | undefined;
+
+  const hasSubcategories =
+    subcategories && subcategories.length > 0 && !searchQuery;
+
+  // Reset subcategory when main category changes
+  useEffect(() => {
+    setActiveSubcategoryId(null);
+  }, [activeId]);
+
+  // Items for current view
   const items = useMemo(() => {
     if (!allItems) return [];
     if (searchQuery.trim()) {
@@ -58,6 +86,44 @@ export default function MenuPage() {
     if (!activeId) return allItems;
     return allItems.filter((item) => item.categoryId === activeId);
   }, [allItems, activeId, searchQuery]);
+
+  // Group items by subcategory for display
+  const groupedItems = useMemo(() => {
+    if (!hasSubcategories || !subcategories) return null;
+
+    // If a specific subcategory is selected, filter to just that one
+    if (activeSubcategoryId) {
+      const sub = subcategories.find((s) => s._id === activeSubcategoryId);
+      if (!sub) return null;
+      return [
+        {
+          subcategory: sub,
+          items: items.filter((i) => i.subcategoryId === sub._id),
+        },
+      ];
+    }
+
+    // Show all items grouped by subcategory
+    const groups: { subcategory: ConvexSubcategory; items: ConvexMenuItem[] }[] =
+      [];
+    for (const sub of subcategories) {
+      const subItems = items.filter((i) => i.subcategoryId === sub._id);
+      if (subItems.length > 0) {
+        groups.push({ subcategory: sub, items: subItems });
+      }
+    }
+
+    // Items without a subcategory
+    const ungrouped = items.filter((i) => !i.subcategoryId);
+    if (ungrouped.length > 0) {
+      groups.push({
+        subcategory: { _id: "other", categoryId: activeId!, name: "Other", sortOrder: 999, isActive: true },
+        items: ungrouped,
+      });
+    }
+
+    return groups;
+  }, [items, subcategories, hasSubcategories, activeSubcategoryId, activeId]);
 
   const loading = !categories || !allItems;
 
@@ -111,6 +177,42 @@ export default function MenuPage() {
                 ))}
               </div>
             </div>
+
+            {/* Subcategories */}
+            {hasSubcategories && (
+              <div className="border-t border-cream-dark dark:border-neutral-700">
+                <div
+                  ref={subcatScrollRef}
+                  className="max-w-7xl mx-auto px-4 overflow-x-auto"
+                >
+                  <div className="flex gap-1 py-2 min-w-max">
+                    <button
+                      onClick={() => setActiveSubcategoryId(null)}
+                      className={`px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                        activeSubcategoryId === null
+                          ? "bg-charcoal dark:bg-white text-white dark:text-charcoal"
+                          : "text-charcoal-light dark:text-neutral-400 hover:bg-cream dark:hover:bg-neutral-800"
+                      }`}
+                    >
+                      All
+                    </button>
+                    {subcategories.map((sub) => (
+                      <button
+                        key={sub._id}
+                        onClick={() => setActiveSubcategoryId(sub._id)}
+                        className={`px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                          activeSubcategoryId === sub._id
+                            ? "bg-charcoal dark:bg-white text-white dark:text-charcoal"
+                            : "text-charcoal-light dark:text-neutral-400 hover:bg-cream dark:hover:bg-neutral-800"
+                        }`}
+                      >
+                        {sub.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -129,15 +231,38 @@ export default function MenuPage() {
                 </p>
               )}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {items.map((item) => (
-                  <MenuCard
-                    key={item._id}
-                    item={item}
-                    onTap={() => setDetailItem(item)}
-                  />
-                ))}
-              </div>
+              {groupedItems ? (
+                // Grouped by subcategory
+                <div className="space-y-10">
+                  {groupedItems.map((group) => (
+                    <div key={group.subcategory._id}>
+                      <h2 className="text-xl font-bold text-burgundy mb-4">
+                        {group.subcategory.name}
+                      </h2>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {group.items.map((item) => (
+                          <MenuCard
+                            key={item._id}
+                            item={item}
+                            onTap={() => setDetailItem(item)}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                // Flat list (search results or categories without subcategories)
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {items.map((item) => (
+                    <MenuCard
+                      key={item._id}
+                      item={item}
+                      onTap={() => setDetailItem(item)}
+                    />
+                  ))}
+                </div>
+              )}
 
               {items.length === 0 && (
                 <div className="text-center py-20">

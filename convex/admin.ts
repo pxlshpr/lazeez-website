@@ -100,6 +100,76 @@ export const updateSetting = mutation({
   },
 });
 
+// Subcategory migration
+export const assignSubcategoriesAndDedupe = mutation({
+  args: {
+    assignments: v.array(
+      v.object({
+        subcategoryName: v.string(),
+        itemNames: v.array(v.string()),
+      })
+    ),
+  },
+  handler: async (ctx, args) => {
+    // Get levant_flavours category
+    const levant = await ctx.db
+      .query("categories")
+      .withIndex("by_slug", (q) => q.eq("slug", "levant_flavours"))
+      .first();
+    if (!levant) throw new Error("levant_flavours category not found");
+
+    // Get all subcategories for this category
+    const subcategories = await ctx.db
+      .query("subcategories")
+      .withIndex("by_category", (q) => q.eq("categoryId", levant._id))
+      .collect();
+    const subMap = new Map(subcategories.map((s) => [s.name, s._id]));
+
+    // Get all levant_flavours menu items
+    const allItems = await ctx.db
+      .query("menuItems")
+      .withIndex("by_category", (q) => q.eq("categoryId", levant._id))
+      .collect();
+
+    // Build name→subcategoryId mapping
+    const nameToSubId = new Map<string, typeof subcategories[0]["_id"]>();
+    for (const assignment of args.assignments) {
+      const subId = subMap.get(assignment.subcategoryName);
+      if (!subId) {
+        console.log(`Subcategory not found: ${assignment.subcategoryName}`);
+        continue;
+      }
+      for (const name of assignment.itemNames) {
+        nameToSubId.set(name.toLowerCase(), subId);
+      }
+    }
+
+    // Assign subcategories and deduplicate
+    const seen = new Set<string>();
+    let updated = 0;
+    let deleted = 0;
+
+    for (const item of allItems) {
+      const key = item.name.toLowerCase();
+      if (seen.has(key)) {
+        // Duplicate - delete it
+        await ctx.db.delete(item._id);
+        deleted++;
+        continue;
+      }
+      seen.add(key);
+
+      const subId = nameToSubId.get(key);
+      if (subId) {
+        await ctx.db.patch(item._id, { subcategoryId: subId });
+        updated++;
+      }
+    }
+
+    return { updated, deleted, total: allItems.length };
+  },
+});
+
 // Reservation management
 export const updateReservationStatus = mutation({
   args: {
