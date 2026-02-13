@@ -84,6 +84,49 @@ export const updateCategory = mutation({
   },
 });
 
+export const deleteCategory = mutation({
+  args: { id: v.id("categories") },
+  handler: async (ctx, args) => {
+    await ctx.db.delete(args.id);
+  },
+});
+
+// Subcategory management
+export const createSubcategory = mutation({
+  args: {
+    categoryId: v.id("categories"),
+    name: v.string(),
+    sortOrder: v.number(),
+  },
+  handler: async (ctx, args) => {
+    return await ctx.db.insert("subcategories", { ...args, isActive: true });
+  },
+});
+
+export const updateSubcategory = mutation({
+  args: {
+    id: v.id("subcategories"),
+    name: v.optional(v.string()),
+    sortOrder: v.optional(v.number()),
+    isActive: v.optional(v.boolean()),
+  },
+  handler: async (ctx, args) => {
+    const { id, ...fields } = args;
+    const updates: Record<string, unknown> = {};
+    for (const [key, val] of Object.entries(fields)) {
+      if (val !== undefined) updates[key] = val;
+    }
+    await ctx.db.patch(id, updates);
+  },
+});
+
+export const deleteSubcategory = mutation({
+  args: { id: v.id("subcategories") },
+  handler: async (ctx, args) => {
+    await ctx.db.delete(args.id);
+  },
+});
+
 // Site settings
 export const updateSetting = mutation({
   args: { key: v.string(), value: v.string() },

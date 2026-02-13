@@ -60,6 +60,27 @@ export const getAllItems = query({
   },
 });
 
+// Admin: get all items including unavailable
+export const getAllItemsAdmin = query({
+  handler: async (ctx) => {
+    return await ctx.db.query("menuItems").collect();
+  },
+});
+
+// Admin: get all categories including inactive
+export const getAllCategoriesAdmin = query({
+  handler: async (ctx) => {
+    return await ctx.db.query("categories").collect();
+  },
+});
+
+// Admin: get all subcategories including inactive
+export const getAllSubcategoriesAdmin = query({
+  handler: async (ctx) => {
+    return await ctx.db.query("subcategories").collect();
+  },
+});
+
 export const getSubcategories = query({
   args: { categoryId: v.id("categories") },
   handler: async (ctx, args) => {
