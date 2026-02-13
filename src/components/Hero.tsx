@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { ReservationModal } from "./ReservationModal";
 
 const slides = [
   "/images/gallery/lazeez_1.jpg",
@@ -15,6 +16,7 @@ const slides = [
 
 export function Hero() {
   const [current, setCurrent] = useState(0);
+  const [reserveOpen, setReserveOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -68,14 +70,12 @@ export function Hero() {
             >
               Explore Our Menu
             </Link>
-            <a
-              href="https://wa.me/9607782460"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setReserveOpen(true)}
               className="border border-white/30 text-white px-8 py-3.5 rounded-full font-medium hover:bg-white/10 transition-colors text-sm uppercase tracking-wider"
             >
               Reserve a Table
-            </a>
+            </button>
           </div>
         </div>
 
@@ -100,6 +100,7 @@ export function Hero() {
           />
         ))}
       </div>
+      <ReservationModal isOpen={reserveOpen} onClose={() => setReserveOpen(false)} />
     </section>
   );
 }

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ShoppingBag, Sun, Moon } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { useTheme } from "@/context/ThemeContext";
+import { ReservationModal } from "./ReservationModal";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -19,6 +20,7 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [reserveOpen, setReserveOpen] = useState(false);
   const pathname = usePathname();
   const { itemCount, setIsOpen: setCartOpen } = useCart();
   const { theme, toggleTheme } = useTheme();
@@ -112,14 +114,12 @@ export function Header() {
               )}
             </button>
 
-            <a
-              href="https://wa.me/9607782460"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setReserveOpen(true)}
               className="bg-burgundy text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-burgundy-dark transition-colors"
             >
               Reserve
-            </a>
+            </button>
           </nav>
 
           {/* Mobile right side */}
@@ -184,17 +184,19 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="https://wa.me/9607782460"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                setReserveOpen(true);
+              }}
               className="bg-burgundy text-white px-5 py-3 rounded-full text-sm font-medium text-center mt-2 hover:bg-burgundy-dark transition-colors"
             >
               Reserve a Table
-            </a>
+            </button>
           </nav>
         </div>
       )}
+      <ReservationModal isOpen={reserveOpen} onClose={() => setReserveOpen(false)} />
     </header>
   );
 }

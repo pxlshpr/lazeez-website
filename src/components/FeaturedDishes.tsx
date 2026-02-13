@@ -2,35 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Loader2 } from "lucide-react";
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
 
-const featured = [
-  {
-    name: "Mezze Platter",
-    description: "A vibrant selection of hummus, moutabal, fattoush, warak enab & marinated olives",
-    price: "170",
-    image: "/images/gallery/lazeez_4.jpg",
-  },
-  {
-    name: "Mixed Shawarma Platter",
-    description: "Grilled chicken & lamb in pita with labneh, thoum, and pickles",
-    price: "170",
-    image: "/images/gallery/lazeez_6.jpg",
-  },
-  {
-    name: "Lazeez Mixed Grill",
-    description: "An assortment of our finest grilled meats with aromatic sides",
-    price: "320",
-    image: "/images/gallery/lazeez_8.jpg",
-  },
-  {
-    name: "Kunafa n' Kream",
-    description: "Crispy shredded phyllo with sweet cream cheese and sugar syrup",
-    price: "129",
-    image: "/images/gallery/lazeez_5.jpg",
-  },
-];
+type FeaturedItem = {
+  _id: string;
+  name: string;
+  description?: string;
+  price: number;
+  imageUrl?: string;
+};
 
 export function FeaturedDishes() {
+  const featured = useQuery(api.menu.getFeaturedItems) as FeaturedItem[] | undefined;
+
   return (
     <section className="py-24 bg-cream dark:bg-neutral-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,34 +29,57 @@ export function FeaturedDishes() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featured.map((dish) => (
-            <div
-              key={dish.name}
-              className="group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:shadow-neutral-950/20 transition-all duration-300"
-            >
-              <div className="relative aspect-square overflow-hidden">
-                <Image
-                  src={dish.image}
-                  alt={dish.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 right-4 bg-burgundy text-white text-sm font-semibold px-3 py-1 rounded-full">
-                  MVR {dish.price}
+        {!featured ? (
+          <div className="flex justify-center py-12">
+            <Loader2 className="animate-spin text-burgundy" size={32} />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featured.map((dish) => {
+              const displayName = dish.name
+                .replace(/\s*\(Veg\)/i, "")
+                .replace(/\s*\(veg\)/i, "");
+              const hasImage = dish.imageUrl && !dish.imageUrl.includes("logo.png");
+
+              return (
+                <div
+                  key={dish._id}
+                  className="group bg-white dark:bg-neutral-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl dark:shadow-neutral-950/20 transition-all duration-300"
+                >
+                  <div className="relative aspect-square overflow-hidden">
+                    {hasImage ? (
+                      <Image
+                        src={dish.imageUrl!}
+                        alt={displayName}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-cream dark:bg-neutral-800 flex items-center justify-center">
+                        <span className="text-charcoal-light dark:text-neutral-500 text-sm">
+                          No image
+                        </span>
+                      </div>
+                    )}
+                    <div className="absolute top-4 right-4 bg-burgundy text-white text-sm font-semibold px-3 py-1 rounded-full">
+                      MVR {dish.price.toFixed(0)}
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-semibold text-charcoal dark:text-white text-lg mb-1">
+                      {displayName}
+                    </h3>
+                    {dish.description && (
+                      <p className="text-charcoal-light dark:text-neutral-400 text-sm leading-relaxed line-clamp-2">
+                        {dish.description}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-charcoal dark:text-white text-lg mb-1">
-                  {dish.name}
-                </h3>
-                <p className="text-charcoal-light dark:text-neutral-400 text-sm leading-relaxed">
-                  {dish.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+              );
+            })}
+          </div>
+        )}
 
         <div className="text-center mt-12">
           <Link
